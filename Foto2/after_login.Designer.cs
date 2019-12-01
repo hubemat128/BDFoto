@@ -67,11 +67,11 @@
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(181, 41);
             this.button4.TabIndex = 3;
-            this.button4.Text = "Dodaj Zdjęcie";
+            this.button4.Text = "Dodaj ";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
-            // Form1
+            // after_login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -80,7 +80,7 @@
             this.Controls.Add(this.button3);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
-            this.Name = "Form1";
+            this.Name = "after_login";
             this.Text = "Form1";
             this.ResumeLayout(false);
 
