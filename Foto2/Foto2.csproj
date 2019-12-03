@@ -52,6 +52,30 @@
     <Compile Include="add_photo.Designer.cs">
       <DependentUpon>add_photo.cs</DependentUpon>
     </Compile>
+    <Compile Include="album.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="album.Designer.cs">
+      <DependentUpon>album.cs</DependentUpon>
+    </Compile>
+    <Compile Include="category.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="category.Designer.cs">
+      <DependentUpon>category.cs</DependentUpon>
+    </Compile>
+    <Compile Include="search_photo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="search_photo.Designer.cs">
+      <DependentUpon>search_photo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="show_album.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="show_album.Designer.cs">
+      <DependentUpon>show_album.cs</DependentUpon>
+    </Compile>
     <Compile Include="manage_photo.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -74,6 +98,15 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="add_photo.resx">
       <DependentUpon>add_photo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="album.resx">
+      <DependentUpon>album.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="category.resx">
+      <DependentUpon>category.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="search_photo.resx">
+      <DependentUpon>search_photo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="manage_photo.resx">
       <DependentUpon>manage_photo.cs</DependentUpon>
