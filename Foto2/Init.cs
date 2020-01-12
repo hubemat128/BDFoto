@@ -6,6 +6,10 @@ using System.Windows.Forms;
 
 namespace HMatuszewski.PhotoAlbum
 {
+    using System.Data;
+    using System.Data.SqlClient;
+    using System.Text;
+
     static class Init
     {
         /// <summary>
@@ -17,6 +21,8 @@ namespace HMatuszewski.PhotoAlbum
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LoginPage());
+
         }
+
     }
 }

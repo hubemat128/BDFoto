@@ -28,13 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.AlbumListGroup = new System.Windows.Forms.GroupBox();
             this.AlbumList = new System.Windows.Forms.ListBox();
             this.AlbumEditGroup = new System.Windows.Forms.GroupBox();
             this.RemoveAlbumBtn = new System.Windows.Forms.Button();
             this.SelectAlbumBtn = new System.Windows.Forms.Button();
-            this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.AddAlbumGroup = new System.Windows.Forms.GroupBox();
             this.AddAlbumBtn = new System.Windows.Forms.Button();
             this.AlbumNameTextBox = new System.Windows.Forms.TextBox();
@@ -65,6 +63,7 @@
             this.AlbumList.Name = "AlbumList";
             this.AlbumList.Size = new System.Drawing.Size(125, 277);
             this.AlbumList.TabIndex = 0;
+            this.AlbumList.SelectedIndexChanged += new System.EventHandler(this.AlbumList_SelectedIndexChanged);
             // 
             // AlbumEditGroup
             // 
@@ -94,12 +93,7 @@
             this.SelectAlbumBtn.TabIndex = 0;
             this.SelectAlbumBtn.Text = "Przeglądaj";
             this.SelectAlbumBtn.UseVisualStyleBackColor = true;
-            // 
-            // imageList1
-            // 
-            this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
-            this.imageList1.ImageSize = new System.Drawing.Size(16, 16);
-            this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            this.SelectAlbumBtn.Click += new System.EventHandler(this.SelectAlbum_Click);
             // 
             // AddAlbumGroup
             // 
@@ -177,7 +171,7 @@
             this.Controls.Add(this.AlbumListGroup);
             this.Name = "AlbumManager";
             this.Text = "Menadżer Albumów";
-            this.Load += new System.EventHandler(this.album_Load);
+            this.Load += new System.EventHandler(this.AlbumManagerLoaded);
             this.AlbumListGroup.ResumeLayout(false);
             this.AlbumEditGroup.ResumeLayout(false);
             this.AddAlbumGroup.ResumeLayout(false);
@@ -195,7 +189,6 @@
         private System.Windows.Forms.GroupBox AlbumEditGroup;
         private System.Windows.Forms.Button RemoveAlbumBtn;
         private System.Windows.Forms.Button SelectAlbumBtn;
-        private System.Windows.Forms.ImageList imageList1;
         private System.Windows.Forms.GroupBox AddAlbumGroup;
         private System.Windows.Forms.Button AddAlbumBtn;
         private System.Windows.Forms.TextBox AlbumNameTextBox;

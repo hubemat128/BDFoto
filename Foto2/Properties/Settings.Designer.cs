@@ -22,5 +22,16 @@ namespace HMatuszewski.PhotoAlbum.Properties {
                 return defaultInstance;
             }
         }
+        
+        [global::System.Configuration.ApplicationScopedSettingAttribute()]
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=bdfoto.database.windows.net;Initial Catalog=BDFoto;Persist Security I" +
+            "nfo=True;User ID=civil;Password=Qwiop12#")]
+        public string BDFotoConnectionString {
+            get {
+                return ((string)(this["BDFotoConnectionString"]));
+            }
+        }
     }
 }
