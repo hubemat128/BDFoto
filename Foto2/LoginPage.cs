@@ -8,11 +8,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Foto2
+namespace HMatuszewski.PhotoAlbum
 {
-    public partial class login : Form
+    public partial class LoginPage : Form
     {
-        public login()
+        public LoginPage()
         {
             InitializeComponent();
         }

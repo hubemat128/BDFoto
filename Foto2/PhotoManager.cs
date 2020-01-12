@@ -8,26 +8,26 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Foto2
+namespace HMatuszewski.PhotoAlbum
 {
-    public partial class manage_photo : Form
+    public partial class PhotoManager : Form
     {
-        public manage_photo()
+        public PhotoManager()
         {
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void DescriptionGroupEnter(object sender, EventArgs e)
         {
 
         }
 
-        private void label3_Click(object sender, EventArgs e)
+        private void AlbumLabelClicked(object sender, EventArgs e)
         {
 
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void CreationDateClicked(object sender, EventArgs e)
         {
 
         }

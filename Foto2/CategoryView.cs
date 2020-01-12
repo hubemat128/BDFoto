@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Foto2
+namespace HMatuszewski.PhotoAlbum
 {
-    public partial class album : Form
+    public partial class CategoryView : Form
     {
-        public album()
+        public CategoryView()
         {
             InitializeComponent();
         }
 
-        private void album_Load(object sender, EventArgs e)
+        private void Form1_Load(object sender, EventArgs e)
         {
 
         }

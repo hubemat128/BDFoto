@@ -6,8 +6,8 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProjectGuid>{7DED13B2-59BD-4D55-8275-4F13B9549839}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>Foto2</RootNamespace>
-    <AssemblyName>Foto2</AssemblyName>
+    <RootNamespace>HMatuszewski.PhotoAlbum</RootNamespace>
+    <AssemblyName>PhotoAlbum</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -46,76 +46,79 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="add_photo.cs">
+    <Compile Include="AddPhotoPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="add_photo.Designer.cs">
-      <DependentUpon>add_photo.cs</DependentUpon>
+    <Compile Include="AddPhotoPage.Designer.cs">
+      <DependentUpon>AddPhotoPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="album.cs">
+    <Compile Include="AlbumManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="album.Designer.cs">
-      <DependentUpon>album.cs</DependentUpon>
+    <Compile Include="AlbumManager.Designer.cs">
+      <DependentUpon>AlbumManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="category.cs">
+    <Compile Include="CategoryView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="category.Designer.cs">
-      <DependentUpon>category.cs</DependentUpon>
+    <Compile Include="CategoryView.Designer.cs">
+      <DependentUpon>CategoryView.cs</DependentUpon>
     </Compile>
-    <Compile Include="search_photo.cs">
+    <Compile Include="PhotoSearcher.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="search_photo.Designer.cs">
-      <DependentUpon>search_photo.cs</DependentUpon>
+    <Compile Include="PhotoSearcher.Designer.cs">
+      <DependentUpon>PhotoSearcher.cs</DependentUpon>
     </Compile>
-    <Compile Include="show_album.cs">
+    <Compile Include="AlbumView.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="show_album.Designer.cs">
-      <DependentUpon>show_album.cs</DependentUpon>
+    <Compile Include="AlbumView.Designer.cs">
+      <DependentUpon>AlbumView.cs</DependentUpon>
     </Compile>
-    <Compile Include="manage_photo.cs">
+    <Compile Include="PhotoManager.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="manage_photo.Designer.cs">
-      <DependentUpon>manage_photo.cs</DependentUpon>
+    <Compile Include="PhotoManager.Designer.cs">
+      <DependentUpon>PhotoManager.cs</DependentUpon>
     </Compile>
-    <Compile Include="after_login.cs">
+    <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="after_login.Designer.cs">
-      <DependentUpon>after_login.cs</DependentUpon>
+    <Compile Include="MainMenu.Designer.cs">
+      <DependentUpon>MainMenu.cs</DependentUpon>
     </Compile>
-    <Compile Include="login.cs">
+    <Compile Include="LoginPage.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="login.Designer.cs">
-      <DependentUpon>login.cs</DependentUpon>
+    <Compile Include="LoginPage.Designer.cs">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </Compile>
-    <Compile Include="Program.cs" />
+    <Compile Include="Init.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="add_photo.resx">
-      <DependentUpon>add_photo.cs</DependentUpon>
+    <EmbeddedResource Include="AddPhotoPage.resx">
+      <DependentUpon>AddPhotoPage.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="album.resx">
-      <DependentUpon>album.cs</DependentUpon>
+    <EmbeddedResource Include="AlbumManager.resx">
+      <DependentUpon>AlbumManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="category.resx">
-      <DependentUpon>category.cs</DependentUpon>
+    <EmbeddedResource Include="AlbumView.resx">
+      <DependentUpon>AlbumView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="search_photo.resx">
-      <DependentUpon>search_photo.cs</DependentUpon>
+    <EmbeddedResource Include="CategoryView.resx">
+      <DependentUpon>CategoryView.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="manage_photo.resx">
-      <DependentUpon>manage_photo.cs</DependentUpon>
+    <EmbeddedResource Include="PhotoSearcher.resx">
+      <DependentUpon>PhotoSearcher.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="after_login.resx">
-      <DependentUpon>after_login.cs</DependentUpon>
+    <EmbeddedResource Include="PhotoManager.resx">
+      <DependentUpon>PhotoManager.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="login.resx">
-      <DependentUpon>login.cs</DependentUpon>
+    <EmbeddedResource Include="MainMenu.resx">
+      <DependentUpon>MainMenu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPage.resx">
+      <DependentUpon>LoginPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -125,6 +128,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>

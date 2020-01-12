@@ -8,13 +8,18 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Foto2
+namespace HMatuszewski.PhotoAlbum
 {
-    public partial class show_album : Form
+    public partial class AlbumManager : Form
     {
-        public show_album()
+        public AlbumManager()
         {
             InitializeComponent();
+        }
+
+        private void album_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

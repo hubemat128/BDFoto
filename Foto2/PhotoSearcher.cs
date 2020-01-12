@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Foto2
+namespace HMatuszewski.PhotoAlbum
 {
-    public partial class after_login : Form
+    public partial class PhotoSearcher : Form
     {
-        public after_login()
+        public PhotoSearcher()
         {
             InitializeComponent();
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void SelectedPhotoClicked(object sender, EventArgs e)
         {
 
         }

@@ -4,9 +4,9 @@ using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Foto2
+namespace HMatuszewski.PhotoAlbum
 {
-    static class Program
+    static class Init
     {
         /// <summary>
         /// Główny punkt wejścia dla aplikacji.
@@ -16,7 +16,7 @@ namespace Foto2
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            Application.Run(new LoginPage());
         }
     }
 }

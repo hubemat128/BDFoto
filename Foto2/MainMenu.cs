@@ -8,16 +8,16 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace Foto2
+namespace HMatuszewski.PhotoAlbum
 {
-    public partial class search_photo : Form
+    public partial class MainMenu : Form
     {
-        public search_photo()
+        public MainMenu()
         {
             InitializeComponent();
         }
 
-        private void label7_Click(object sender, EventArgs e)
+        private void AddClicked(object sender, EventArgs e)
         {
 
         }
