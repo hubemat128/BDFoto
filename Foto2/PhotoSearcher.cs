@@ -21,5 +21,12 @@ namespace HMatuszewski.PhotoAlbum
         {
 
         }
+
+        private void ReturnBtn_Click(object sender, EventArgs e)
+        {
+            var mainMenu = new MainMenu();
+            mainMenu.Show();
+            Hide();
+        }
     }
 }

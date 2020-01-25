@@ -88,6 +88,8 @@
     <Compile Include="CategoryView.Designer.cs">
       <DependentUpon>CategoryView.cs</DependentUpon>
     </Compile>
+    <Compile Include="DBRequest.cs" />
+    <Compile Include="Photo.cs" />
     <Compile Include="PhotoSearcher.cs">
       <SubType>Form</SubType>
     </Compile>

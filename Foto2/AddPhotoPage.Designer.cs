@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.CategoryGroup = new System.Windows.Forms.GroupBox();
-            this.CategoryListBox = new System.Windows.Forms.TreeView();
+            this.CategoryListBox = new System.Windows.Forms.ListBox();
             this.AlbumGroup = new System.Windows.Forms.GroupBox();
             this.AlbumListBox = new System.Windows.Forms.ListBox();
             this.TagGroup = new System.Windows.Forms.GroupBox();
@@ -68,14 +68,14 @@
             this.CategoryGroup.TabIndex = 16;
             this.CategoryGroup.TabStop = false;
             this.CategoryGroup.Text = "Wybierz kategorię dla zdjęcia";
-            this.CategoryGroup.Enter += new System.EventHandler(this.groupBox2_Enter);
             // 
             // CategoryListBox
             // 
+            this.CategoryListBox.FormattingEnabled = true;
             this.CategoryListBox.Location = new System.Drawing.Point(11, 24);
             this.CategoryListBox.Margin = new System.Windows.Forms.Padding(2);
             this.CategoryListBox.Name = "CategoryListBox";
-            this.CategoryListBox.Size = new System.Drawing.Size(152, 121);
+            this.CategoryListBox.Size = new System.Drawing.Size(148, 121);
             this.CategoryListBox.TabIndex = 1;
             // 
             // AlbumGroup
@@ -144,6 +144,7 @@
             this.AddTagBtn.TabIndex = 16;
             this.AddTagBtn.Text = "Dodaj";
             this.AddTagBtn.UseVisualStyleBackColor = true;
+            this.AddTagBtn.Click += new System.EventHandler(this.AddTagBtn_Click);
             // 
             // RemoveTagBtn
             // 
@@ -163,7 +164,6 @@
             this.TagListBox.Name = "TagListBox";
             this.TagListBox.Size = new System.Drawing.Size(159, 108);
             this.TagListBox.TabIndex = 0;
-            this.TagListBox.SelectedIndexChanged += new System.EventHandler(this.TagListSelectIndexChanged);
             // 
             // PreviewImage
             // 
@@ -174,7 +174,6 @@
             this.PreviewImage.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PreviewImage.TabIndex = 50;
             this.PreviewImage.TabStop = false;
-            this.PreviewImage.Click += new System.EventHandler(this.PreviewImageClicked);
             // 
             // FileNameLabel
             // 
@@ -185,7 +184,6 @@
             this.FileNameLabel.Size = new System.Drawing.Size(68, 13);
             this.FileNameLabel.TabIndex = 49;
             this.FileNameLabel.Text = "Nazwa pliku:";
-            this.FileNameLabel.Click += new System.EventHandler(this.FileNameLabelClicked);
             // 
             // PathTextBox
             // 
@@ -195,7 +193,6 @@
             this.PathTextBox.Name = "PathTextBox";
             this.PathTextBox.Size = new System.Drawing.Size(270, 20);
             this.PathTextBox.TabIndex = 48;
-            this.PathTextBox.TextChanged += new System.EventHandler(this.PathTextBoxChanged);
             // 
             // FileNameTextBox
             // 
@@ -205,7 +202,6 @@
             this.FileNameTextBox.Name = "FileNameTextBox";
             this.FileNameTextBox.Size = new System.Drawing.Size(270, 20);
             this.FileNameTextBox.TabIndex = 47;
-            this.FileNameTextBox.TextChanged += new System.EventHandler(this.FilenameTextChanged);
             // 
             // ChoosePhotoBtn
             // 
@@ -237,7 +233,6 @@
             this.PathLabel.Size = new System.Drawing.Size(48, 13);
             this.PathLabel.TabIndex = 44;
             this.PathLabel.Text = "Ścieżka:";
-            this.PathLabel.Click += new System.EventHandler(this.PathLabelClicked);
             // 
             // ReturnButton
             // 
@@ -257,7 +252,6 @@
             this.PhotoDescTextBox.Name = "PhotoDescTextBox";
             this.PhotoDescTextBox.Size = new System.Drawing.Size(270, 20);
             this.PhotoDescTextBox.TabIndex = 42;
-            this.PhotoDescTextBox.TextChanged += new System.EventHandler(this.PhotoDescTextChanged);
             // 
             // PhotoDescLabel
             // 
@@ -268,7 +262,6 @@
             this.PhotoDescLabel.Size = new System.Drawing.Size(68, 13);
             this.PhotoDescLabel.TabIndex = 41;
             this.PhotoDescLabel.Text = "Opis słowny:";
-            this.PhotoDescLabel.Click += new System.EventHandler(this.PhotoDescClicked);
             // 
             // PhotoNameTextBox
             // 
@@ -277,7 +270,6 @@
             this.PhotoNameTextBox.Name = "PhotoNameTextBox";
             this.PhotoNameTextBox.Size = new System.Drawing.Size(270, 20);
             this.PhotoNameTextBox.TabIndex = 40;
-            this.PhotoNameTextBox.TextChanged += new System.EventHandler(this.PhotoNameTextChanged);
             // 
             // PhotoNameLabel
             // 
@@ -288,7 +280,6 @@
             this.PhotoNameLabel.Size = new System.Drawing.Size(79, 13);
             this.PhotoNameLabel.TabIndex = 39;
             this.PhotoNameLabel.Text = "Nazwa zdjęcia:";
-            this.PhotoNameLabel.Click += new System.EventHandler(this.PhotoNameClicked);
             // 
             // AddPhotoPage
             // 
@@ -327,7 +318,6 @@
         #endregion
 
         private System.Windows.Forms.GroupBox CategoryGroup;
-        private System.Windows.Forms.TreeView CategoryListBox;
         private System.Windows.Forms.GroupBox AlbumGroup;
         private System.Windows.Forms.ListBox AlbumListBox;
         private System.Windows.Forms.GroupBox TagGroup;
@@ -348,5 +338,6 @@
         private System.Windows.Forms.Label PhotoDescLabel;
         private System.Windows.Forms.TextBox PhotoNameTextBox;
         private System.Windows.Forms.Label PhotoNameLabel;
+        private System.Windows.Forms.ListBox CategoryListBox;
     }
 }

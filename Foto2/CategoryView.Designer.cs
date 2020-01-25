@@ -28,10 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.TreeNode treeNode2 = new System.Windows.Forms.TreeNode("");
             this.ReturnBtn = new System.Windows.Forms.Button();
             this.CategoryListGroup = new System.Windows.Forms.GroupBox();
-            this.CategoryList = new System.Windows.Forms.TreeView();
             this.RemoveCategoryGroup = new System.Windows.Forms.GroupBox();
             this.RemoveCategoryBtn = new System.Windows.Forms.Button();
             this.AddCategoryGroup = new System.Windows.Forms.GroupBox();
@@ -40,6 +38,7 @@
             this.ChangeCategoryNameGroup = new System.Windows.Forms.GroupBox();
             this.ChangeCategoryNameTextBox = new System.Windows.Forms.TextBox();
             this.ChangeCategoryNameBtn = new System.Windows.Forms.Button();
+            this.CategoryList = new System.Windows.Forms.ListView();
             this.CategoryListGroup.SuspendLayout();
             this.RemoveCategoryGroup.SuspendLayout();
             this.AddCategoryGroup.SuspendLayout();
@@ -55,6 +54,7 @@
             this.ReturnBtn.TabIndex = 10;
             this.ReturnBtn.Text = "Powrót";
             this.ReturnBtn.UseVisualStyleBackColor = true;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
             // CategoryListGroup
             // 
@@ -67,19 +67,6 @@
             this.CategoryListGroup.TabIndex = 9;
             this.CategoryListGroup.TabStop = false;
             this.CategoryListGroup.Text = "Lista kategorii";
-            // 
-            // CategoryList
-            // 
-            this.CategoryList.AllowDrop = true;
-            this.CategoryList.Location = new System.Drawing.Point(4, 24);
-            this.CategoryList.Margin = new System.Windows.Forms.Padding(2);
-            this.CategoryList.Name = "CategoryList";
-            treeNode2.Name = "Node0";
-            treeNode2.Text = "";
-            this.CategoryList.Nodes.AddRange(new System.Windows.Forms.TreeNode[] {
-            treeNode2});
-            this.CategoryList.Size = new System.Drawing.Size(124, 238);
-            this.CategoryList.TabIndex = 6;
             // 
             // RemoveCategoryGroup
             // 
@@ -102,6 +89,7 @@
             this.RemoveCategoryBtn.TabIndex = 3;
             this.RemoveCategoryBtn.Text = "Usuń kategorię";
             this.RemoveCategoryBtn.UseVisualStyleBackColor = true;
+            this.RemoveCategoryBtn.Click += new System.EventHandler(this.RemoveCategoryBtn_Click);
             // 
             // AddCategoryGroup
             // 
@@ -125,6 +113,7 @@
             this.AddCategoryBtn.TabIndex = 1;
             this.AddCategoryBtn.Text = "Dodaj kategorię";
             this.AddCategoryBtn.UseVisualStyleBackColor = true;
+            this.AddCategoryBtn.Click += new System.EventHandler(this.AddCategoryBtn_Click);
             // 
             // NewCategoryNameTextBox
             // 
@@ -164,6 +153,16 @@
             this.ChangeCategoryNameBtn.TabIndex = 2;
             this.ChangeCategoryNameBtn.Text = "Zmień nazwę";
             this.ChangeCategoryNameBtn.UseVisualStyleBackColor = true;
+            this.ChangeCategoryNameBtn.Click += new System.EventHandler(this.ChangeCategoryNameBtn_Click);
+            // 
+            // CategoryList
+            // 
+            this.CategoryList.HideSelection = false;
+            this.CategoryList.Location = new System.Drawing.Point(4, 24);
+            this.CategoryList.Name = "CategoryList";
+            this.CategoryList.Size = new System.Drawing.Size(124, 238);
+            this.CategoryList.TabIndex = 7;
+            this.CategoryList.UseCompatibleStateImageBehavior = false;
             // 
             // CategoryView
             // 
@@ -192,7 +191,6 @@
 
         private System.Windows.Forms.Button ReturnBtn;
         private System.Windows.Forms.GroupBox CategoryListGroup;
-        private System.Windows.Forms.TreeView CategoryList;
         private System.Windows.Forms.GroupBox RemoveCategoryGroup;
         private System.Windows.Forms.Button RemoveCategoryBtn;
         private System.Windows.Forms.GroupBox AddCategoryGroup;
@@ -201,5 +199,6 @@
         private System.Windows.Forms.GroupBox ChangeCategoryNameGroup;
         private System.Windows.Forms.TextBox ChangeCategoryNameTextBox;
         private System.Windows.Forms.Button ChangeCategoryNameBtn;
+        private System.Windows.Forms.ListView CategoryList;
     }
 }

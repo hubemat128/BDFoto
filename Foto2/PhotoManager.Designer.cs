@@ -64,18 +64,18 @@
             // 
             // PhotoPreview
             // 
-            this.PhotoPreview.Location = new System.Drawing.Point(43, 44);
+            this.PhotoPreview.Location = new System.Drawing.Point(39, 44);
             this.PhotoPreview.Name = "PhotoPreview";
-            this.PhotoPreview.Size = new System.Drawing.Size(337, 227);
+            this.PhotoPreview.Size = new System.Drawing.Size(341, 227);
             this.PhotoPreview.TabIndex = 0;
             this.PhotoPreview.TabStop = false;
             // 
             // DescriptionGroup
             // 
             this.DescriptionGroup.Controls.Add(this.PhotoDescriptionLabel);
-            this.DescriptionGroup.Location = new System.Drawing.Point(43, 289);
+            this.DescriptionGroup.Location = new System.Drawing.Point(39, 289);
             this.DescriptionGroup.Name = "DescriptionGroup";
-            this.DescriptionGroup.Size = new System.Drawing.Size(239, 88);
+            this.DescriptionGroup.Size = new System.Drawing.Size(605, 88);
             this.DescriptionGroup.TabIndex = 1;
             this.DescriptionGroup.TabStop = false;
             this.DescriptionGroup.Text = "Opis zdjęcia";
@@ -101,7 +101,7 @@
             this.PhotoDataGroup.Controls.Add(this.NameLabel);
             this.PhotoDataGroup.Location = new System.Drawing.Point(417, 44);
             this.PhotoDataGroup.Name = "PhotoDataGroup";
-            this.PhotoDataGroup.Size = new System.Drawing.Size(200, 116);
+            this.PhotoDataGroup.Size = new System.Drawing.Size(222, 116);
             this.PhotoDataGroup.TabIndex = 2;
             this.PhotoDataGroup.TabStop = false;
             this.PhotoDataGroup.Text = "Paramtetry";
@@ -175,7 +175,7 @@
             // 
             this.TagsGroup.Location = new System.Drawing.Point(417, 170);
             this.TagsGroup.Name = "TagsGroup";
-            this.TagsGroup.Size = new System.Drawing.Size(200, 100);
+            this.TagsGroup.Size = new System.Drawing.Size(222, 100);
             this.TagsGroup.TabIndex = 3;
             this.TagsGroup.TabStop = false;
             this.TagsGroup.Text = "Tagi";
@@ -319,6 +319,7 @@
             this.ReturnBtn.TabIndex = 13;
             this.ReturnBtn.Text = "Powrót";
             this.ReturnBtn.UseVisualStyleBackColor = true;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
             // PhotoManager
             // 

@@ -12,9 +12,11 @@ namespace HMatuszewski.PhotoAlbum
 {
     public partial class PhotoManager : Form
     {
-        public PhotoManager()
+        public PhotoManager(Image photo)
         {
             InitializeComponent();
+            PhotoPreview.SizeMode = PictureBoxSizeMode.StretchImage;
+            PhotoPreview.Image = photo;
         }
 
         private void DescriptionGroupEnter(object sender, EventArgs e)
@@ -30,6 +32,13 @@ namespace HMatuszewski.PhotoAlbum
         private void CreationDateClicked(object sender, EventArgs e)
         {
 
+        }
+
+        private void ReturnBtn_Click(object sender, EventArgs e)
+        {
+            var mainMenu = new MainMenu();
+            mainMenu.Show();
+            Hide();
         }
     }
 }

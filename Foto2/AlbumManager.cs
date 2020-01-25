@@ -15,7 +15,7 @@ namespace HMatuszewski.PhotoAlbum
 
     public partial class AlbumManager : Form
     {
-        private BindingList<Album> _albums = new BindingList<Album>();
+        private BindingList<TextInstance> _albums = new BindingList<TextInstance>();
 
         public AlbumManager()
         {
@@ -30,33 +30,98 @@ namespace HMatuszewski.PhotoAlbum
 
             LoadPreImportedPhotos();
 
-
+            LoadAlbums();
         }
 
         private void LoadPreImportedPhotos()
         {
-            _albums.Add(new Album(){Name = "PreImportedPhotos"});
-            _albums.Add(new Album(){Name = "Empty Head"});
+            _albums.Add(new TextInstance(){Name = "PreImportedPhotos"});
+            _albums.Add(new TextInstance(){Name = "Empty Head"});
             AlbumList.Refresh();
         }
 
 
-        private void AlbumList_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void SelectAlbum_Click(object sender, EventArgs e)
         {
             var albumView =  new AlbumView(AlbumList.SelectedItem.ToString());
             albumView.Show();
         }
+
+        private void ReturnBtn_Click(object sender, EventArgs e)
+        {
+            var mainMenu = new MainMenu();
+            mainMenu.Show();
+            Hide();
+        }
+
+
+        private void LoadAlbums()
+        {
+            DBRequests.MakeRequest(DBRequests.LoadAlbums(), (connection, sqlCommand) =>
+            {
+                using (var reader = sqlCommand.ExecuteReader())
+                {
+                    if (reader.HasRows)
+                    {
+                        while (reader.Read())
+                        {
+                            _albums.Add(new TextInstance{Name = reader.GetString(0)});
+                        }
+                    }
+                    AlbumList.Refresh();
+
+                }
+            });
+        }
+
+        private void RemoveAlbumBtn_Click(object sender, EventArgs e)
+        {
+            DBRequests.MakeRequest(DBRequests.DeleteAlbum(AlbumList.SelectedItems[0].ToString()), (connection, sqlCommand) =>
+            {
+                Console.WriteLine(connection);
+                Console.WriteLine(sqlCommand);
+                using (var reader = sqlCommand.ExecuteReader())
+                {
+                    Console.WriteLine(reader);
+                    LoadAlbums();
+                }
+            });
+        }
+
+        private void AddAlbumBtn_Click(object sender, EventArgs e)
+        {
+            DBRequests.MakeRequest(DBRequests.CreateAlbum(AlbumNameTextBox.Text), (connection, sqlCommand) =>
+            {
+                Console.WriteLine(connection);
+                Console.WriteLine(sqlCommand);
+                using (var reader = sqlCommand.ExecuteReader())
+                {
+                    Console.WriteLine(reader);
+                    LoadAlbums();
+                }
+            });
+        }
+
+        private void ChangeNameBtn_Click(object sender, EventArgs e)
+        {
+            DBRequests.MakeRequest(DBRequests.RenameAlbum(AlbumList.SelectedItems[0].ToString(), ChangeNameTextBox.Text), (connection, sqlCommand) =>
+            {
+                Console.WriteLine(connection);
+                Console.WriteLine(sqlCommand);
+                using (var reader = sqlCommand.ExecuteReader())
+                {
+                    Console.WriteLine(reader);
+                    LoadAlbums();
+                }
+            });
+        }
     }
 
-    public class Album
+    public class TextInstance
     {
         public string Name;
-
+        public int ID;
         public override string ToString()
         {
             return Name;

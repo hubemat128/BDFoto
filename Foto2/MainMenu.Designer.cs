@@ -42,6 +42,7 @@
             this.AlbumBtn.TabIndex = 1;
             this.AlbumBtn.Text = "Albumy";
             this.AlbumBtn.UseVisualStyleBackColor = true;
+            this.AlbumBtn.Click += new System.EventHandler(this.AlbumBtn_Click);
             // 
             // CategoryBtn
             // 
@@ -51,6 +52,7 @@
             this.CategoryBtn.TabIndex = 0;
             this.CategoryBtn.Text = "Kategorie";
             this.CategoryBtn.UseVisualStyleBackColor = true;
+            this.CategoryBtn.Click += new System.EventHandler(this.CategoryBtn_Click);
             // 
             // FindBtn
             // 
@@ -60,6 +62,7 @@
             this.FindBtn.TabIndex = 2;
             this.FindBtn.Text = "Wyszkuja Zdjęcie";
             this.FindBtn.UseVisualStyleBackColor = true;
+            this.FindBtn.Click += new System.EventHandler(this.FindBtn_Click);
             // 
             // AddBtn
             // 

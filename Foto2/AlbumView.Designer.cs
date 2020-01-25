@@ -47,6 +47,7 @@
             this.PhotoList.Size = new System.Drawing.Size(776, 426);
             this.PhotoList.TabIndex = 0;
             this.PhotoList.UseCompatibleStateImageBehavior = false;
+            this.PhotoList.SelectedIndexChanged += new System.EventHandler(this.PhotoList_SelectedIndexChanged);
             // 
             // AlbumView
             // 

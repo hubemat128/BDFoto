@@ -246,6 +246,7 @@
             this.ReturnBtn.TabIndex = 13;
             this.ReturnBtn.Text = "Powrót";
             this.ReturnBtn.UseVisualStyleBackColor = true;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
             // PhotoSearcher
             // 

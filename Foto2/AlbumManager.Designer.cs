@@ -63,7 +63,6 @@
             this.AlbumList.Name = "AlbumList";
             this.AlbumList.Size = new System.Drawing.Size(125, 277);
             this.AlbumList.TabIndex = 0;
-            this.AlbumList.SelectedIndexChanged += new System.EventHandler(this.AlbumList_SelectedIndexChanged);
             // 
             // AlbumEditGroup
             // 
@@ -84,6 +83,7 @@
             this.RemoveAlbumBtn.TabIndex = 1;
             this.RemoveAlbumBtn.Text = "Usuń";
             this.RemoveAlbumBtn.UseVisualStyleBackColor = true;
+            this.RemoveAlbumBtn.Click += new System.EventHandler(this.RemoveAlbumBtn_Click);
             // 
             // SelectAlbumBtn
             // 
@@ -114,6 +114,7 @@
             this.AddAlbumBtn.TabIndex = 1;
             this.AddAlbumBtn.Text = "Dodaj";
             this.AddAlbumBtn.UseVisualStyleBackColor = true;
+            this.AddAlbumBtn.Click += new System.EventHandler(this.AddAlbumBtn_Click);
             // 
             // AlbumNameTextBox
             // 
@@ -142,6 +143,7 @@
             this.ChangeNameBtn.TabIndex = 1;
             this.ChangeNameBtn.Text = "Zmień nazwę";
             this.ChangeNameBtn.UseVisualStyleBackColor = true;
+            this.ChangeNameBtn.Click += new System.EventHandler(this.ChangeNameBtn_Click);
             // 
             // ChangeNameTextBox
             // 
@@ -158,6 +160,7 @@
             this.ReturnBtn.TabIndex = 4;
             this.ReturnBtn.Text = "Powrót";
             this.ReturnBtn.UseVisualStyleBackColor = true;
+            this.ReturnBtn.Click += new System.EventHandler(this.ReturnBtn_Click);
             // 
             // AlbumManager
             // 
